@@ -23,7 +23,8 @@ const Square: React.FC<SquareProps> = ({ value, onClick }) => {
 
   return (
     <button 
-      className="square d-flex align-items-center justify-content-center border-0 rounded-3 shadow-sm"
+      className="square d-flex align-items-center justify-content-center border-0 rounded-3 shadow-sm 
+                 bg-white bg-opacity-90 user-select-none position-relative overflow-hidden"
       onClick={onClick}
     >
       {renderImage()}

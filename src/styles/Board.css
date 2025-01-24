@@ -77,4 +77,37 @@
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+/* Additional utility classes */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Optional: Add animation classes */
+.animate__animated {
+  animation-duration: 0.5s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 } 
