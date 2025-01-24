@@ -1,7 +1,6 @@
 import React from 'react';
 import xImage from '../assets/x.png';
 import oImage from '../assets/o.png';
-import '../styles/Square.css';
 
 interface SquareProps {
   value: 'X' | 'O' | null;
@@ -23,7 +22,10 @@ const Square: React.FC<SquareProps> = ({ value, onClick }) => {
   };
 
   return (
-    <button className="square" onClick={onClick}>
+    <button 
+      className="square d-flex align-items-center justify-content-center border-0 rounded-3 shadow-sm"
+      onClick={onClick}
+    >
       {renderImage()}
     </button>
   );

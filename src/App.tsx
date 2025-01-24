@@ -17,8 +17,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      <h1>X Mix Drix</h1>
+    <div className="container-fluid min-vh-100 py-4 bg-gradient text-center">
+      <h1 className="display-4 text-secondary mb-4 fw-bold">X Mix Drix</h1>
       <Board onGameEnd={handleGameEnd} reset={resetGame} />
       {gameResult && (
         <GameResult result={gameResult} onPlayAgain={handlePlayAgain} />

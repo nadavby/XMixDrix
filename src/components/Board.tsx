@@ -63,12 +63,18 @@ const Board: React.FC<BoardProps> = ({ onGameEnd, reset }) => {
   };
 
   return (
-    <div className="game-container">
-      {!gameEnded && <div className="turn-indicator">{getTurnMessage()}</div>}
-      <div className="board">
-        {squares.map((square, i) => (
-          <Square key={i} value={square} onClick={() => handleClick(i)} />
-        ))}
+    <div className="d-flex flex-column align-items-center">
+      {!gameEnded && (
+        <div className="h3 fw-bold text-secondary mb-4">
+          {getTurnMessage()}
+        </div>
+      )}
+      <div className="game-board p-3 rounded-4 shadow">
+        <div className="board-grid">
+          {squares.map((square, i) => (
+            <Square key={i} value={square} onClick={() => handleClick(i)} />
+          ))}
+        </div>
       </div>
     </div>
   );
