@@ -63,13 +63,13 @@ const Board: React.FC<BoardProps> = ({ onGameEnd, reset }) => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="d-flex flex-column align-items-center justify-content-center">
       {!gameEnded && (
-        <div className="h3 fw-bold text-secondary mb-4">
+        <div className="h3 fw-bold text-secondary mb-4 text-opacity-75 user-select-none">
           {getTurnMessage()}
         </div>
       )}
-      <div className="game-board p-3 rounded-4 shadow">
+      <div className="game-board p-3 rounded-4 shadow-lg bg-opacity-90">
         <div className="board-grid">
           {squares.map((square, i) => (
             <Square key={i} value={square} onClick={() => handleClick(i)} />
